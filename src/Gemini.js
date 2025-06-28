@@ -1,7 +1,9 @@
 // Gemini.js
 import axios from "axios";
+import 'dotenv/config'
+require('dotenv').config()
 
-const API_KEY = "AIzaSyAyUhPxv-u7TUOrpHkoYtzZ5Is9N9aj1Uo"; // ← your key
+const API_KEY = process.env(Api_keys) // ← your key
 const URL = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${API_KEY}`;
 
 export async function GenrateapiResponse(prompt) {
